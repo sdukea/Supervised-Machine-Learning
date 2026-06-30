@@ -84,7 +84,7 @@ def zscore_normalize_features(X):
     # axis=1 -- rows; calculate mean for each row
     # that's it; axis=2 won't work as X is a 2D array and you only have 2 directions/axis
 
-    # mu is a 1-D array having the n mean valuesfor all n features in data X (2D data)
+    # mu is a 1-D array having the n mean values for all n features in data X (2D data)
 
     sigma = np.std(X, axis=0) # same, for all feature/column values
 
