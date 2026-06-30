@@ -64,7 +64,7 @@ import time
 # vector creation
 
 a1 = np.zeros(4)
-
+# same as
 a2 = np.zeros((4,)) # (4,) 1-D array with 4 elements in it
 
 # (4,2); creates a 2D array with 4 rows and 2 columns

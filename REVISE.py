@@ -77,3 +77,23 @@ def gradient_descent(X, y, w_in, b_in, cost_func, grad_terms, alpha, num_iters):
 w_opt, b_opt, J = gradient_descent(X_train, y_train, w_init, b_init, compute_cost, 
                                    compute_grad_terms, alpha=5.0e-7, num_iters=1000)
 
+
+# ––––––––––––––––––––––––––––––––––––––––––––
+
+# NumPy and vectorization
+
+a1 = np.zeros(4)
+print(a1)
+
+a2 = np.zeros((4,))
+print(a2)
+
+a3 = np.random.random_sample(4)
+print(a3)
+
+a4 = np.arange(4)
+print(a4)
+
+a5 = np.random.rand(10000000)  
+print(a5)
+
