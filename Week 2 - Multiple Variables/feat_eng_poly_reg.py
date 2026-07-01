@@ -30,9 +30,11 @@ np.set_printoptions(precision=2)
 # have (like y_train)
 # this is usually/in most cases unknown because you just get the actual labels only (with features as 
 # well that correspond) and determining a relationship is totally undoable right off the bat
+
 # the ground truth function is a rule that applies to any valid input – not just the training data
 # works for all unseen and seen/trained/known inputs as well and is not just restricted to the ones
 # in your training dataset
+
 # the dataset is actually a finite sample from that underlying function
 # what does this mean:
 # 1. there are infinitely many inputs i.e. feature values/vectors
@@ -53,6 +55,10 @@ np.set_printoptions(precision=2)
 # y = f(x) + ϵ
 # where ϵ is the noise or everything affecting y – your true output label – that is not captured
 # by your input x (any of them)
+
+# NOTE: The ground truth function is reality itself, viewed only through the features you decided 
+# to measure.
+
 # say x = hours studied (just one feature) and y = exam score
 # you might think y = f(x) (some ground truth function that we assume is universal)
 # but in reality, exam score is also affected by sleep quality, stress, luck, question difficulty
