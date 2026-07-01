@@ -21,8 +21,6 @@ def compute_cost(X, y, w, b):
 
         cost += error
 
-        print((1/2*m)*cost)
-
     cost = cost / (2*m)
     return cost
 
@@ -41,16 +39,16 @@ def compute_grad_terms(X, y, w, b):
 
         f_wvecb_xvec_i = np.dot(X[i], w) + b
 
-        error = (f_wvecb_xvec_i - y[i])**2
+        error = f_wvecb_xvec_i - y[i]
 
         for j in range(n):
 
-            dj_dw[j] = error * X[i, j]
+            dj_dw[j] += error * X[i, j]
 
         dj_db += error
 
-        dj_dw = dj_dw / m
-        dj_db = dj_db / m
+    dj_dw = dj_dw / m
+    dj_db = dj_db / m
     
     return dj_dw, dj_db
 
@@ -64,36 +62,17 @@ def gradient_descent(X, y, w_in, b_in, cost_func, grad_terms, alpha, num_iters):
     b = b_in
 
     for i in range(num_iters):
+
         dj_dw, dj_db = grad_terms(X, y, w, b)
 
-        w = w - alpha * dj_dw
-        b = b - alpha * dj_db
+        w -= alpha * dj_dw
+        b -= alpha * dj_db
 
-        if i < 100000:
-            J_history.append(cost_func(X, y, w, b))
+        if i % 100 == 0:
+            cost = cost_func(X, y, w, b)
+            print(f"Iteration {i}: Cost = {cost:.6f}")
 
     return w, b, J_history
 
 w_opt, b_opt, J = gradient_descent(X_train, y_train, w_init, b_init, compute_cost, 
                                    compute_grad_terms, alpha=5.0e-7, num_iters=1000)
-
-
-# ––––––––––––––––––––––––––––––––––––––––––––
-
-# NumPy and vectorization
-
-a1 = np.zeros(4)
-print(a1)
-
-a2 = np.zeros((4,))
-print(a2)
-
-a3 = np.random.random_sample(4)
-print(a3)
-
-a4 = np.arange(4)
-print(a4)
-
-a5 = np.random.rand(10000000)  
-print(a5)
-

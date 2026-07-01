@@ -389,4 +389,3 @@ for i in range(m):
 
 # Since we've got the actually optimal w and b (which were set to all zeros first via initial_w and
 # initial_b), we can perform prediction.
-
