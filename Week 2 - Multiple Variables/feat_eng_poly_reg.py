@@ -35,6 +35,56 @@ np.set_printoptions(precision=2)
 # works for all unseen and seen/trained/known inputs as well and is not just restricted to the ones
 # in your training dataset
 
+# Say you had this ground truth function: y =x^2
+
+# x	 y
+# 1	 1
+# 2	 4
+# 3	 9
+# 4	 16
+# 5	 25
+
+# Now, if I asked what y is when x = 10,
+# -> x = 10 is not in the training set
+# -> but the rule can still tell the answer 
+# = (10)^2 = 100
+# The rule was NEVER LIMITED TO THE FIVE POINTS
+
+# These data points are only a small part of the inputs –
+# there are INFINITELY MANY INPUTS
+
+# Now, say you only saw:
+
+# x	 y
+# 1	 1
+# 2	 4
+# 3	 9
+# 4	 16
+# 5	 25
+
+# Without telling you the rule, someone asks 
+# what is y when x = 10?
+
+# No - we will have to build a model for that
+
+# A model that will approximate to this ground truth function that exists not here
+# but EXISTS
+
+# The GTF 'knows' what happens for every possible input
+
+# Say you have a 2 hour movie:
+# You take screenshots at 10 minutes, 30 minutes, 60 minutes and 90 minutes
+
+# This is your dataset; the entire movie is the ground truth function
+
+# Just because you only have four screenshots doesn't mean the movie only exists 
+# at those four moments.
+
+# It still exists at 103 minutes, 11 minutes and the 31st minute, even though you never
+
+# captured them.
+
+# That's why we say:
 # the dataset is actually a finite sample from that underlying function
 # what does this mean:
 # 1. there are infinitely many inputs i.e. feature values/vectors

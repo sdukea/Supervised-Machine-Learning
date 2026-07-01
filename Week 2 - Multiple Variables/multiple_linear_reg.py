@@ -376,7 +376,7 @@ iterations = 1000
 
 w_final, b_final, J_hist = gradient_descent(X_train, y_train, initial_w, initial_b, compute_cost,
                                             compute_gradient_terms, alpha=5.0e-7, num_iters=iterations)
-
+    
 # w_init was a set of w values we used for demonstration purposes
 # for finding the optimal values for w (4 of them) and b that minimizes the cost function J,
 # we start with all 4 w values to be 0 and b also 0 to then run G.D. and track cost and see
