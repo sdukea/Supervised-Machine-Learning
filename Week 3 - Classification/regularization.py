@@ -70,8 +70,8 @@ import matplotlib.pyplot as plt
 # regularization: controls model complexity/flexibility
 
 # and you reduce model complexity by reducing the impact of parameters w1 to wn
-# essentially, we penalize/regularize the model if associated parameters are huge - we minimize the size
-# of these parameters close to 0
+# essentially, we penalize/regularize the model if associated parameters are huge - we minimize the 
+# size of these parameters close to 0
 
 # larger weights: feature is important
 # lower weights: feature is not important
@@ -349,4 +349,3 @@ def compute_gradient_log_reg(X, y, w, b, lambda_):
         dj_dw[j] = dj_dw[j] + (lambda_/m) * w[j]
 
     return dj_db, dj_dw
-
