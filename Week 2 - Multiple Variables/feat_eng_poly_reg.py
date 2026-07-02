@@ -107,7 +107,7 @@ np.set_printoptions(precision=2)
 # by your input x (any of them)
 
 # NOTE: The ground truth function is reality itself, viewed only through the features you decided 
-# to measure.
+# to measure - and hence our feature/predictors/dataset is incomplete (and inconsistent)
 
 # say x = hours studied (just one feature) and y = exam score
 # you might think y = f(x) (some ground truth function that we assume is universal)
@@ -583,3 +583,26 @@ plt.plot(x,X@model_w + model_b, label="Predicted Value"); plt.xlabel("x"); plt.y
 
 # you may never know what y = f(x) but we try to approximate to this, with our incomplete evidence
 # (dataset) - that's what ML is
+
+
+# –––––– REVISE
+
+# the ground truth is the real world that generate the dataset
+#                                                         |
+#                                                        \/
+# some number of features n and feature values that we derive/observe from the real world
+# that we collect as data                                       |
+#                                                              \/
+# observation has two flaws; one is that we can NEVER observe/record ALL possible changes/features 
+# for getting the outputs from - this is humanely impossible. This is why we have x/x_vec + noise
+# where noise is everything that affected our output that was not in the dataset; the second thing
+# is that we are inconsistent - we make mistakes/errors while collecting data so we NEVER truly
+# interpret or see the ground truth output that the real world gave - so our y that we derived from
+# features (that are both inconsistent and incomplete) is NEVER the actual ground truth - we rather
+# call them the observed labels and still use them
+#                                          |
+#                                         \/
+# we use these observed labels as our ground truth but statiscally, they are not the ground truth. 
+# Inherently, they are y = f(x) + e where 'e' is the noise - everyhing that is not in our dataset 
+# (as our feature/predictors are incomplete/inconsistent - we can never capture just f(x) without
+# noise)    
