@@ -3,6 +3,7 @@
 import numpy as np
 import time
 
+
 # vectors
 # - ordered array of numbers
 # - lower case bold letters
