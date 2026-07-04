@@ -104,6 +104,7 @@ a2 = x = np.array([
     ]
 ])
 
+
 # and so on; further blocking (a block's block's block's block('s) and so on) until 
 # we catch its rows and columns and continue
 
